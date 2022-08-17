@@ -1,6 +1,6 @@
 import React from 'react'
 import { useDispatch } from 'react-redux'
-import { deleteTravel } from '../redux/actions/Travel.action'
+import { deleteTravel } from '../redux/actions/travel.action'
 
 export default function DeleteTravelCard({travel}) {
   const dispatch = useDispatch()

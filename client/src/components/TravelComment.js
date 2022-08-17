@@ -1,8 +1,9 @@
 import React from 'react'
+import { useState } from 'react';
 
-import React from "react";
+
 import { useSelector, useDispatch } from "react-redux";
-import { addComment, getAllTravels } from '../redux/actions/Travel.action';
+import { addComment, getAllTravels } from '../redux/actions/travel.action';
 
 import { isEmpty, timeStampParser } from "../Utils";
 import EditDeleteComment from "./EditDeleteComment";
@@ -54,9 +55,7 @@ export default function TravelComment({travel}) {
               <div className="comment-header">
                 <div className="pseudo">
                   <h3>{comment.commenterPseudo}</h3>
-                  {comment.commenterId !== userData._id && (
-                    <FollowHandler idToFollow={comment.commenterId} />
-                  )}
+        
                 </div>
                 <span>{timeStampParser(comment.timeStamp)}</span>
               </div>

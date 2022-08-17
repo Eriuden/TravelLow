@@ -1,8 +1,15 @@
-import React, { useEffect } from 'react'
-import { useSelector } from 'react-redux';
-import { getTravel } from '../redux/actions/Travel.action';
+import React, { useEffect,useState } from 'react'
+import { useSelector, useDispatch } from 'react-redux';
+import { getTravel } from '../redux/actions/travel.action';
+import { isEmpty } from '../Utils';
+import { updateTravel } from '../redux/actions/travel.action';
+import { dateParser } from '../Utils';
+import DeleteTravelCard from '../components/DeleteTravelCard';
+import LikeButton from '../components/LikeButton';
+import TravelComment from '../components/TravelComment';
 
-export default function TravelPage() {
+
+export default function TravelPage(travel) {
   const [isLoading, setIsLoading] = useState(true);
   const [isUpdated, setIsUpdated] = useState(false);
   const [textUpdate, setTextUpdate] = userData(null);

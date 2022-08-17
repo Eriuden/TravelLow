@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import { useState, useEffect } from 'react'
 import { useDispatch } from 'react-redux'
-import { deleteComment, editComment } from '../redux/actions/Travel.action'
+import { deleteComment, editComment } from '../redux/actions/travel.action'
 import { uidContext } from './AppContext'
 
 

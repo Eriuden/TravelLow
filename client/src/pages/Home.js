@@ -1,8 +1,10 @@
 import React from 'react'
 import {useDispatch} from "react-redux"
 import { useSelector } from 'react-redux'
-import { getAllTravels } from '../redux/actions/Travel.action'
+import { getAllTravels } from '../redux/actions/travel.action'
 import TravelCard from '../components/TravelCard'
+import { useEffect } from 'react'
+import { isEmpty } from '../Utils'
 
 
 export default function Home() {

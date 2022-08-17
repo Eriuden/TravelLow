@@ -1,10 +1,12 @@
 import React from 'react'
+import { useState,useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { updateTravel } from '../redux/actions/Travel.action';
+import { updateTravel } from '../redux/actions/travel.action';
 import LikeButton from './LikeButton';
 import DeleteTravelCard from './DeleteTravelCard';
 import TravelComment from './TravelComment';
 import { dateParser } from '../Utils';
+import { isEmpty } from '../Utils';
 
 export default function TravelCard({travel}) {
   const [isLoading, setIsLoading] = useState(true);
